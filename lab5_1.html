@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script language="javascript" type="text/javascript">
+            function Area(){
+                var a=document.getElementById("s1").value;
+                var b=document.getElementById("s2").value;
+                var c=document.getElementById("s3").value;
+                // semi perimeter
+                const s=(a+b+c)/2;
+                const result = Math.sqrt(s*(s-a)*(s-b)*(s-c));
+                document.getElementById("area").value=result;
+                // document.getElementById("areaoftriangle").innerHtml="<p>The area of triangle is : </p>"+result;
+            }
+        </script>
+    </head>
+    <body>
+        <table >
+            <caption>calculate Area</caption>
+                  
+            <tr>
+                <td>Side1 :</td>
+                <td><input type="number" id="s1"></td>
+            </tr>
+            <tr>
+                <td>Side2 :</td>
+                <td><input type="number" id="s2"></td>
+            </tr>
+            <tr>
+                <td>Side3 :</td>
+                <td><input type="number" id="s3"></td>
+            </tr>
+            <tr>
+                <td>Area :</td>
+                <td><input type="number" id="area"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Calculate Area" onclick="Area()"></td>
+            </tr>
+         
+            
+            <!-- <p id="areaoftriangle"></p> -->
+            
+        </table>
+    </body>
+</html>

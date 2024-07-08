@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <script language="javascript" type="text/javascript">
+            function area() {
+                var a = parseInt(document.getElementById("a").value);
+                var b = parseInt(document.getElementById("b").value);
+                var c = parseInt(document.getElementById("c").value);
+                var s = (a+b+c)/2;
+                var d = s*(s-a)*(s-b)*(s-c);
+                var result = Math.sqrt(d);
+                document.getElementById("result").value = result;
+            }
+        </script>
+        <style>
+            fieldset {
+                width:250px;
+                height:auto;
+                border-color: blue;
+            }
+            table {
+                text-align: center;
+                margin-left:auto;
+                margin-right:auto;
+            }
+            .field{
+                width:50px;
+            }
+            .field2{
+                border-style:hidden;
+            }
+            .button{
+                text-align: center;
+                margin:auto;
+                display:flex;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <table>
+                    <tr>
+                        <td>Side 1: </td>
+                        <td><input type="number" id="a" class="field"></td>
+                    </tr>
+                    <tr>
+                        <td>Side 2: </td>
+                        <td><input type="number" id="b" class="field"></td>
+                    </tr>
+                    <tr>
+                        <td>Side 3: </td>
+                        <td><input type="number" id="c" class="field"></td>
+                    </tr>
+                </table>
+                <input type="button" onclick="area()" value="Area of Triangle" class="button"><br>
+                <label>The area of triangle is </label>
+                <input type="number" id="result" class="field2">
+            </fieldset>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+<!-- Lab 04: Calculate the area of tringle when base and height is known. [Area = (base *height)/2]  -->
+<!-- program to calculate area of traingle -->
+<html>
+    <head>
+        <style type="text/css">
+           
+            #box{
+                /* height:25%; */
+                width:30%;
+                background-color:rgb(242, 245, 247);
+                box-shadow: 6px 5px 27px -4px black;
+                border-radius: 10px;
+                margin: 10%;
+            }
+           
+            #result{
+               margin: 5% 75%;
+
+            }
+         
+        </style>  
+            
+           
+        <script language="javascript" type="text/javascript">
+            function Area(){
+                var x=document.getElementById("base").value;
+                var y=document.getElementById("height").value;
+                var area=(x*y)/2;
+                document.getElementById("Area").value=area;
+            }
+        </script>
+    </head>
+    <body>
+        <div >
+            <div id="box">
+            <table>
+                
+                <caption>calculate Area</caption>
+                  
+                <tr>
+                    <td>Base: </td>
+                    <td><input type="number" id="base"/></td>
+                </tr>
+                <tr>
+                    <td>Height: </td>
+                    <td><input type="number" id="height"/></td>
+                </tr>
+                <tr>
+                    <td>Result: </td>
+                    <td><input type="number" id="Area" /></td>
+                </tr>
+                <div id="result">
+                <tr>
+                    <td><input type="button" value="Area of Traingle" id="result" onmouseover="Area()"/></td>
+                </tr>
+            </div>
+            </table>
+        </div>
+        
+        </div>
+        
+        
+ 
+    </body>
+</html>

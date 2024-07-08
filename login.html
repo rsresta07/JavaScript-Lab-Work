@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <script language="javascript" type="text/javascript">
+            function Info() {
+                var book=new Object();
+                book.name=document.getElementById("name").value;
+                book.author=document.getElementById("author").value;
+                function addprice(amount) {
+                    this.amount=amount;
+                }
+                book.addprice(document.getElementById("price"));
+            }
+        </script>
+        <style>
+            fieldset{
+                width: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+            <table>
+                <tr>
+                    <td>Book Name</td>
+                    <td><input type="text" id="name"></td>
+                </tr>
+                <tr>
+                    <td>Author Name</td>
+                    <td><input type="text" id="author"></td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td><input type="number" id="price"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" onclick="Info()" value="Get Info"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><p id="para"></p></td>
+                </tr>
+            </table>
+            </fieldset>
+        </form>
+    </body>
+</html>

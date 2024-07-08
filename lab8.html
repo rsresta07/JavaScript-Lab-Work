@@ -1,0 +1,33 @@
+<!-- Lab 08: Find the Factorial of a Number using JavaScript  -->
+<html>
+    <head>
+        <title>Factorial</title>
+        <script type="text/javascript">
+            function factorial(n) {
+            if (n === 0 || n === 1) {
+              return 1;
+            } else {
+              return n * factorial(n - 1);
+          }
+        }
+        function calculateFactorial() {
+                const num = parseInt(document.getElementById('num').value);
+                const result = factorial(num);
+                alert(`Factorial of ${num} is: ${result}`);
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+
+        <tr>
+            <td>Number :</td>
+            <td><input type="number" id="num"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Calculate factorial" onclick="calculateFactorial()"></td>
+        </tr>
+    </table>
+
+    </body>
+</html>

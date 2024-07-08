@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script language="javascript" type="text/javascript">
+            function area() {
+                var b2 = document.getElementById("b").value;
+                var h2 = document.getElementById("h").value;
+                var result = (b2*h2)/2;
+                alert("area of triangle = " +result);
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <label>Base: </label>
+            <input type="number" id="b"><br>
+            <label>Height: </label>
+            <input type="number" id="h"><br>
+            <input type="button" onclick="area()" value="Area of Triangle">
+        </form>
+    </body>
+</html>

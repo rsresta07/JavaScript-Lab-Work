@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Percentage Calculator</title>
+    <script>
+        function calculatePercentage() {
+            var id = document.getElementById("id").value;
+            var name = document.getElementById("name").value;
+            var marks = [];
+            for (var i = 1; i <= 5; i++) {
+                marks.push(parseFloat(document.getElementById("subject" + i).value));
+            }
+
+            var sum = 0;
+            for (var i = 0; i < marks.length; i++) {
+                sum += marks[i];
+            }
+
+            var percentage = (sum / (marks.length * 100)) * 100;
+
+            var outputTable = document.getElementById("outputTable");
+            outputTable.innerHTML = ""; // Clear existing data in the output table
+
+            // Insert new rows with data in the output table
+            var newRow = outputTable.insertRow();
+            var idCell = newRow.insertCell(0);
+            var nameCell = newRow.insertCell(1);
+            var marksCell = newRow.insertCell(2);
+            var totalMarksCell = newRow.insertCell(3);
+            var percentageCell = newRow.insertCell(4);
+            idCell.innerHTML = id;
+            nameCell.innerHTML = name;
+            marks.forEach(function(mark) {
+                newRow = outputTable.insertRow();
+                marksCell = newRow.insertCell(2);
+                marksCell.innerHTML = mark;
+            });
+            totalMarksCell.innerHTML = sum;
+            percentageCell.innerHTML = percentage.toFixed(2) + "%";
+        }
+    </script>
+</head>
+<body>
+    <h1>Student Percentage Calculator</h1>
+    <table>
+        <tr>
+            <td><label for="id">ID:</label></td>
+            <td><input type="text" id="id" required></td>
+        </tr>
+        <tr>
+            <td><label for="name">Name:</label></td>
+            <td><input type="text" id="name" required></td>
+        </tr>
+        <tr>
+            <td><label for="subject1">Subject 1:</label></td>
+            <td><input type="number" id="subject1" required></td>
+        </tr>
+        <tr>
+            <td><label for="subject2">Subject 2:</label></td>
+            <td><input type="number" id="subject2" required></td>
+        </tr>
+        <tr>
+            <td><label for="subject3">Subject 3:</label></td>
+            <td><input type="number" id="subject3" required></td>
+        </tr>
+        <tr>
+            <td><label for="subject4">Subject 4:</label></td>
+            <td><input type="number" id="subject4" required></td>
+        </tr>
+        <tr>
+            <td><label for="subject5">Subject 5:</label></td>
+            <td><input type="number" id="subject5" required></td>
+        </tr>
+    </table>
+    <br>
+    <input type="button" value="Calculate Percentage" onclick="calculatePercentage()">
+    <h2>Result:</h2>
+    <table id="outputTable" border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Marks</th>
+            <th>Total Marks

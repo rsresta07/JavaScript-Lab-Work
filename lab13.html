@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Remove Duplicates from an Array</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function getUnique(arr) {
+            const uniqueArr =[... new Set(arr)];
+            return uniqueArr;
+        }
+
+        const array = [1, 2, 2, 3, 4, 4, 5, 5, 5];
+        document.write("Original Array : "+ array);
+        const uniqueArray = getUnique(array);
+        document.write("<br>Array without Duplicates : " + uniqueArray);
+        </script>
+</body>
+</html>

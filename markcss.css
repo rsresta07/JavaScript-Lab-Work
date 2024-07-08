@@ -1,0 +1,28 @@
+table {
+    background-color: lavender;
+    display: inline-block;
+}
+form {
+    background-color: lavender;
+    width: fit-content;
+    display: inline-block;
+}
+fieldset {
+    background-color: palevioletred;
+    padding:10px;
+    border-radius:8px;
+    box-shadow:0 0 10px #666;
+    margin-bottom: 0px;
+}
+body {
+    text-align: center;
+}
+#roll{
+    width: 100px;
+}
+#name{
+    width: 150px;
+}
+#s1, #s2, #s3, #s4, #s5{
+    width:50px;
+}

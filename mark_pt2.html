@@ -1,0 +1,72 @@
+<!-- Write a html and JavaScript code to take id, name, 5 subject marks. The subjects marks should be taken using array. 
+    Add 5 subjects and return the percentage of the sum in tabular format just below the inputs. 
+    Give the output as id, name, 5 subject (each with its own seperate rows), sum and percentage-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Percentage Calculator</title>
+    <script src="mark_pt2.js"></script>
+    <link rel="stylesheet" href="markc.css"/>
+</head>
+<body>
+    <center>
+    <table cellspacing ="5" id="table1">
+        <caption><b>Input Marks</b></caption><br/>
+        <tr>
+            <td><label for="id">ID:</label></td>
+            <td><input type="text" id="id"></td>
+        </tr>
+        <tr>
+            <td><label for="name">Name:</label></td>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <th colspan="2"><label>Score</label></th>
+        </tr>
+        <tr>
+            <td><label for="subject1">Software Engineering</label></td>
+            <td><input type="number" id="subject1"></td>
+        </tr>
+        <tr>
+            <td><label for="subject2">DBMS </label></td>
+            <td><input type="number" id="subject2"></td>
+        </tr>
+        <tr>
+            <td><label for="subject3">Operating System </label></td>
+            <td><input type="number" id="subject3"></td>
+        </tr>
+        <tr>
+            <td><label for="subject4">Numerial Method </label></td>
+            <td><input type="number" id="subject4"></td>
+        </tr>
+        <tr>
+            <td><label for="subject5">Scripting Language </label></td>
+            <td><input type="number" id="subject5"></td>
+        </tr>
+        <tr>
+            <th height="30">
+                <input type="button" value="Calculate Percentage" onclick="calculatePercentage()">
+            </th>
+            <th height="30"><input type="reset" value="reset"></th>
+        </tr>
+    </table>
+    <br/>
+    
+    <table cellspacing="5" id="TableScore" border="1">
+		<caption><b>Student Data</b></caption><br/>
+		<tr>
+            <th>ID </th>
+			<th width="150"> Name </th>
+			<th>&nbsp; Software Engineering &nbsp;</th>
+			<th>&nbsp; DBMS &nbsp;</th>
+			<th>&nbsp; Operating System &nbsp;</th>
+			<th>&nbsp; Numerial Method &nbsp;</th>
+			<th>&nbsp; Scripting Language &nbsp;</th>
+			<th>&nbsp; Total &nbsp;</th>
+			<th>&nbsp; Percentage &nbsp;</th>
+			<th>&nbsp; Result &nbsp;</th>
+		</tr>
+	</table>
+    </center>
+</body>
+</html>

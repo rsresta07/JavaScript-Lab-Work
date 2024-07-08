@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculate Area of Triangle</title>
+    <script type="text/javascript">
+        function Area() {
+            var a = parseFloat(document.getElementById("s1").value);
+            var b = parseFloat(document.getElementById("s2").value);
+            var c = parseFloat(document.getElementById("s3").value);
+
+            // Calculate the area using Heron's formula.
+            var s = (a + b + c) / 2;
+            var result = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+            
+            // Display the area in the input field.
+            document.getElementById("area").value = result.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <caption>Calculate Area</caption>
+        <tr>
+            <td>Side1 :</td>
+            <td><input type="number" id="s1"></td>
+        </tr>
+        <tr>
+            <td>Side2 :</td>
+            <td><input type="number" id="s2"></td>
+        </tr>
+        <tr>
+            <td>Side3 :</td>
+            <td><input type="number" id="s3"></td>
+        </tr>
+        <tr>
+            <td>Area :</td>
+            <td><input type="number" id="area" readonly></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Calculate Area" onclick="Area()"></td>
+        </tr>
+    </table>
+</body>
+</html>
